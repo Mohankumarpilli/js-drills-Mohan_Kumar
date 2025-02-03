@@ -1,5 +1,10 @@
-const data = require('./Data')
+const aged_at = require('./Problem7');
 
-const person_details = require('./Problem7')
+const data = require('./Data');
 
-console.log(person_details(data));
+try{
+    let age = 25;
+    console.log(aged_at(data,age));
+}catch(error){
+    console.log(error.message);
+}

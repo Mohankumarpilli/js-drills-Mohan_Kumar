@@ -2,6 +2,10 @@
 // "Car 33 is a *car year goes here* *car make goes here* *car model goes here*"
 
 function Car_details(details, id) {
+    if(typeof(id) != 'number'){
+        console.log('give valid id');
+        return null;
+    }
     const result = details.find(element => {
         if (element.id == id) {
             return element;

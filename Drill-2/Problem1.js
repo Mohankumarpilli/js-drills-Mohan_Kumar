@@ -2,6 +2,19 @@
 // "Car 33 is a *car year goes here* *car make goes here* *car model goes here*"
 
 function Car_details(details, id) {
+
+    if(!Array.isArray(details)){
+        throw new Error("give correct dataset");
+    }
+
+    if(typeof(id) != 'number'){
+        throw new Error('enter valid numbers');
+    }
+
+    if(id < 0 || id > details.length){
+        throw new Error('enter valid numbers');
+    }
+    
     for(let i = 0; i < details.length; i++){
         if(details[i].id == id){
             return details[i];

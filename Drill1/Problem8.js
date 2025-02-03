@@ -1,16 +1,16 @@
 //    Implement a loop to access and log the city and country of each individual in the dataset.
 
-function person_city(data){
-    const address = [];
-    data.forEach(element => {
-        let details = {
-            "city" : element.city,
-            "country" : element.country
-        }
-        address.push(details);
-    });
+function print_city(data){
+    if(!Array.isArray(data)){
+        throw new Error("give correct dataset");
+    }
 
-    return address;
+    for(let index of data){
+        if((typeof index != 'object') || typeof index.city != 'string' || typeof index.name != 'string' || typeof index.country != 'string'){
+            throw new Error("Give correct data set");
+        }
+        console.log(`name is ${index.name} lives in ${index.city} ${index.country}`);
+    }
 }
 
-module.exports = person_city;
+module.exports = print_city;

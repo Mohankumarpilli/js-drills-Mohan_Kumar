@@ -2,4 +2,8 @@ const data = require('./Data');
 
 const year = require('./Problem4')
 
-console.log(year(data));
+try{
+    console.log(year(data));
+}catch(error){
+    console.log(error.message);
+}

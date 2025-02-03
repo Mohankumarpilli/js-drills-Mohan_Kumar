@@ -1,13 +1,21 @@
 //    Create a function that extracts and displays the names of individuals who are students (`isStudent: true`) and live in Australia.
-const data = require('./Data');
-function isstudent_australia(data){
-    let student = [];
-    data.forEach(element => {
-        if(element.isStudent && element.country == 'Australia'){
-            student.push(element);
+
+function students_details(data){
+    let students = [];
+
+    if(!Array.isArray(data)){
+        throw new Error("give correct dataset");
+    }
+
+    for(let index of data){
+        if((typeof index != 'object') || typeof index.isStudent != 'boolean' || typeof index.country != 'string'){
+            throw new Error("Give correct data set");
         }
-    });
-    return student;
+        if(index.isStudent && index.country == 'Australia'){
+            students.push(index.name);
+        }
+    }
+    return students;
 }
 
-module.exports = isstudent_australia;
+module.exports = students_details;

@@ -1,5 +1,9 @@
 const data = require('./Data');
 
-const ages = require('./Problem5')
+const print_ages = require('./Problem5');
 
-console.log(ages(data));
+try{
+    console.log(print_ages(data));
+}catch(error){
+    console.log(error.message);
+}

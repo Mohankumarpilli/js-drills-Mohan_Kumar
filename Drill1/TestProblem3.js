@@ -1,5 +1,9 @@
-const data = require('./Data')
+const data = require('./Data');
 
-const student = require('./Problem3')
+const students = require('./Problem3');
 
-console.log(student(data));
+try{
+    console.log(students(data));
+}catch(error){
+    console.log(error.message);
+}

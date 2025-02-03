@@ -1,5 +1,9 @@
-const data = require('./Data')
+const print_hobbies = require('./Problem6');
 
-const hobby = require('./Problem6')
+const data = require('./Data');
 
-console.log(hobby(data));
+try{
+    console.log(print_hobbies(data));
+}catch(error){
+    console.log(error.message);
+}

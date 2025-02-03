@@ -1,12 +1,21 @@
 //    Implement a function that retrieves and prints the hobbies of individuals with a specific age, say 30 years old.
-function specific_age(data,age){
-    let person_age = [];
-    data.forEach(element => {
-        if(element.age == age){
-            person_age.push(element);
+
+function print_hobbies(data){
+    
+    if(!Array.isArray(data)){
+        throw new Error("give correct dataset");
+    }
+
+    let hobby = [];
+    for(let index of data){
+        if((typeof index != 'object') || typeof index.age != 'number'){
+            throw new Error("Give correct data set");
         }
-    });
-    return person_age;
+        if(index.age==30){
+            hobby.push(index.hobbies);
+        }
+    }
+    return hobby;
 }
 
-module.exports = specific_age;
+module.exports = print_hobbies;

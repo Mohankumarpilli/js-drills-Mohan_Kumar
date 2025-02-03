@@ -6,4 +6,8 @@ let n = 33;
 
 let result = car_id(data, n);
 
-console.log(`Car ${n} is a ${result.car_year} ${result.car_make} ${result.car_model}`);
+if(result){
+    console.log(`Car ${n} is a ${result.car_year} ${result.car_make} ${result.car_model}`);
+}else{
+    console.log('some thing went wrong')
+}

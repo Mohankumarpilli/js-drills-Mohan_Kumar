@@ -1,5 +1,9 @@
-const data = require('./Data')
+const print_city = require('./Problem8');
 
-const city = require('./Problem8')
+const data = require('./Data');
 
-console.log(city(data));
+try{
+    print_city(data);
+}catch(error){
+    console.log(error.message);
+}

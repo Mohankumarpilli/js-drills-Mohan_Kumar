@@ -1,5 +1,9 @@
+const get_all_emails = require('./Problem1');
+
 const data = require('./Data');
 
-const email = require('./Problem1');
-
-console.log(email(data));
+try{
+    console.log(get_all_emails(data));
+}catch(error){
+    console.log(error.message);
+}
