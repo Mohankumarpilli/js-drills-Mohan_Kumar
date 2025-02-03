@@ -2,12 +2,12 @@
 // "Car 33 is a *car year goes here* *car make goes here* *car model goes here*"
 
 function Car_details(details, id) {
-    const result = details.find(element => {
-        if (element.id == id) {
-            return element;
+    for(let i = 0; i < details.length; i++){
+        if(details[i].id == id){
+            return details[i];
         }
-    });
-    return result;
+    }
+    return null;
 }
 
 module.exports = Car_details; 

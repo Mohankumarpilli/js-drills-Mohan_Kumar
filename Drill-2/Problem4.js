@@ -2,9 +2,9 @@
 
 function reterive_years(data){
     let years = [];
-    data.forEach(element => {
-        years.push(element.car_year);
-    });
+    for(let i = 0; i < data.length; i++){
+        years.push(data[i].car_year);
+    }
     return years;
 }
 

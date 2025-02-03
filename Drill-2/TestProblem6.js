@@ -1,7 +1,5 @@
 const data = require('./Data');
 
-const {interested_in, interested_in_usingfilter} = require('./Problem6')
+const {interested_in} = require('./Problem6')
 
 console.log(JSON.stringify(interested_in(data)));
-
-console.log(JSON.stringify(interested_in_usingfilter(data)));

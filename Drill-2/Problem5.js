@@ -2,11 +2,11 @@
 
 function older_cars(data){
     let older_car = [];
-    data.forEach(element => {
-        if(element.car_year<2000){
-            older_car.push(element);
+    for(let element = 0; element < data.length; element++){
+        if(data[element].car_year<2000){
+            older_car.push(data[element]);
         }
-    });
+    };
     return older_car;   
 }
 
