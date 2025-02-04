@@ -1,7 +1,7 @@
 // Q1 Find all users who are interested in playing video games.
 
 function playes_games(data){
-    if(typeof(data) != 'object'){
+    if(typeof(data) != 'object' || Array.isArray(data)){
         throw new Error('dataset is not correct');
     }
 

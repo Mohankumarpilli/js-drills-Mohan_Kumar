@@ -20,8 +20,8 @@ function last_car(data){
     last = data[data.length-1];
     return last;
 }
-let last = last_car(data);
 
+let last = last_car(data);
 
 function latest_car(data){
     if(!Array.isArray(data)){
